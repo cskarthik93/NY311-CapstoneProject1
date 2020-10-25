@@ -1,0 +1,26 @@
+
+Create Credential and Bucket Variables
+1. In a notebook, create a cell where you copy the credentials in Python variables as follows (in a hidden cell). Get the values for your credentials to replace the placeholder **** strings from the credential information that you got in the previous section in the course when you created a Panda Dataframe from the uploaded file.
+client_cred = ibm_boto3.client(service_name='s3',
+ibm_api_key_id='***',
+ibm_auth_endpoint='***',
+config=Config(signature_version='oauth'),
+endpoint_url='***')
+
+2. Create a bucket variable. Replace the **** string with the bucket string that you got when you created a Panda Dataframe from the uploaded file in the previous section
+bucket = '***'
+
+
+Upload a File to Cloud Object Store by Using the Credential and Bucket Variables
+1. Create a pickle (PKL) file out of the Dataframe:
+df.to_pickle('./df_raw.pkl')
+
+2. Upload the pickle (PKL) file:
+client_cred.upload_file('./df_raw.pkl',bucket,'df_raw_cos.pkl')
+
+Download a File from Cloud Object Store by Using Credential and Bucket Variables
+1. Download the file from Cloud Object Store:
+client_cred.download_file(Bucket=bucket,Key='df_raw_cos.pkl',Filename='./df_raw_local.pkl')
+
+2. Create a Dataframe out of the file:
+df = pd.read_pickle('./df_raw_local.pkl')
