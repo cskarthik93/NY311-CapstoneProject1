@@ -108,8 +108,7 @@ The PLUTO dataset which contains information on every building in New York City'
 
 This contained geographical data about the boundaries of the boroughs in New York in a GeoJSON format. This will be useful to help with the analysis of the geographical effects on the number of complaints made. This data can be accessed from https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm.
 
-
-**Prediction Model Results **
+**Prediction Model Results**
 
 For binary target (complaint made or not):
 
