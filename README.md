@@ -1,10 +1,13 @@
 **An Analysis & Prediction of New York City Housing Complaints**
 
 **Problem Statement**
-**Definition:**
+
+**Problem Description:**
+
 The people of New Yorker use the 311 system to report complaints about the non-emergency problems to local authorities. Various agencies in New York are assigned these problems. The Department of Housing Preservation and Development of New York City is the agency that processes 311 complaints that are related to housing and buildings. In the last few years, the number of 311 complaints coming to the Department of Housing Preservation and Development has increased significantly. Although these complaints are not necessarily urgent, the large volume of complaints and the sudden increase is possibly impacting the overall efficiency of operations of the agency. Therefore, a better solution for Department of Housing Preservation and Development will probably help them to manage the large volume of 311 complaints they are receiving every year.
 
 **Questions to the Dataset:**
+
 Which complaint type should the Department of Housing Preservation and Development of New York City focus on first?
 
 Should the Department of Housing Preservation and Development of New York City focus on any specific geographical area (borough, zip codes, or street) for the determined complaint type?
@@ -14,6 +17,7 @@ Is there any obvious relationship between the characteristics of a house or buil
 Can a predictive model be built for future possible complaints of the determined complaint type?
 
 **Datasets used:**
+
 For this project, we are planning to use the following 3 datasets to analyse & solve the questions stated above.
 
 311-complaint dataset that contains information on complaints to the Department related to housing and building complaints https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9
@@ -101,3 +105,23 @@ The PLUTO dataset which contains information on every building in New York City'
 **Data on borough boundaries in New York**
 This contained geographical data about the boundaries of the boroughs in New York in a GeoJSON format. This will be useful to help with the analysis of the geographical effects on the number of complaints made. This data can be accessed from https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm.
 
+
+**Prediction Model Results **
+
+For binary target (complaint made or not):
+
+Logistic regression -> Jaccard score of 0.9899, F1 score of 0.99
+
+**For predicting the number of complaints:**
+
+K-Nearest Neighbors -> accuracy score of 0.97,
+
+Multiple linear regression: Residual sum of squares of 31763.86, R^2/coeffient of determination of 0.07
+
+**Conclusion**
+
+Depending on the method the Department of Housing Preservation and Development wants to employ, it is possible to make a predictive model from the data they have.
+
+If they would like to use the binary approach, a logistic regression model will be a good fit for future predictions.
+
+On the other hand, if they would like to predict the total number of complaints for a building, then I would recommend the KNN model as I believe that it is a better fit than the multiple linear regression model.
