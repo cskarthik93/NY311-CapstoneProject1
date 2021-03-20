@@ -27,6 +27,7 @@ PLUTO dataset which has information on every building's characteristics https://
 We also found a coordinate data on the boundaries of New York boroughs that will be useful to help visualise the locations of a sample of heating complaints https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm
 
 **311 Complaint Dataset**
+
 The original dataset is available at https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9 which can be downloaded by using the API.
 
 This dataset contains metadata of complaints made to the Department relating to housing and building problems. The original 311 complaint dataset has 46 columns of information however, for this project, we are planning to use only a selection of the following columns to analyse the data. These were:
@@ -60,6 +61,7 @@ This dataset contains metadata of complaints made to the Department relating to 
 • Longitude - Geo based Lat of the incident location
 
 **PLUTO dataset for housing**
+
 The PLUTO dataset which contains information on every building in New York City's characteristic will be used to find whether complaints have any correlation with complaints being made. obtained the data set from here: https://www1.nyc.gov/assets/planning/download/zip/data-maps/open-data/nyc_pluto_18v1.zip. This dataset contains a lot of information about individual buildings but the features we are planning to use in the analysis were:
 
 • Lot Number - The number of the tax lot
@@ -103,6 +105,7 @@ The PLUTO dataset which contains information on every building in New York City'
 • Y Coord - The Y coordinate of the XY coordinate pair which depicts the approximate location of the lot.
 
 **Data on borough boundaries in New York**
+
 This contained geographical data about the boundaries of the boroughs in New York in a GeoJSON format. This will be useful to help with the analysis of the geographical effects on the number of complaints made. This data can be accessed from https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm.
 
 
